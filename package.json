@@ -1,7 +1,9 @@
 {
-  "name": "proximax-sirius-wallet",
-  "version": "0.0.1",
-  "author": "Proximax",
+  "name": "two4one-wallet",
+  "version": "1.0.0",
+  "author": "TWO4ONE",
+  "main": "index.js",
+  "type": "module", 
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
@@ -12,10 +14,11 @@
     "ionic:serve": "ionic-app-scripts serve",
     "build:testnet": "node build.testnet.js && ionic cordova build android",
     "build:mainnet": "node build.mainnet.js && ionic cordova build android"
+    "start": "node index.js"
   },
   "engines": {
   "node": "18.x"
-  }
+  },
   "dependencies": {
     "@angular/animations": "^5.2.10",
     "@angular/cli": "7.3.8",
@@ -121,6 +124,8 @@
     "tsjs-xpx-chain-sdk": "^0.6.1",
     "uniqid": "5.0.3",
     "zone.js": "0.8.26"
+    "express": "^5.2.1",
+    "ws": "^8.20.0"
   },
   "devDependencies": {
     "@ionic/app-scripts": "^3.2.4",
