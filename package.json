@@ -12,15 +12,19 @@
     "build": "ionic-app-scripts build",
     "build:testnet": "node build.testnet.js && ionic cordova build android",
     "build:mainnet": "node build.mainnet.js && ionic cordova build android",
-    "ionic:build": "node ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build",
+    "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
     "lint": "ionic-app-scripts lint",
     "start": "node index.js"
   },
 
   "engines": {
-    "node": "14.21.3",
-    "npm": "6.14.18"
+    "node": "20.x",
+    "npm": ">=10"
+  },
+
+  "overrides": {
+    "bufferutil": "4.0.9"
   },
 
   "dependencies": {
@@ -106,6 +110,7 @@
     "es6-promise-plugin": "4.2.2",
 
     "express": "5.2.1",
+
     "highcharts": "6.1.1",
     "ionic-angular": "3.9.2",
     "ionic-plugin-deeplinks": "1.0.20",
