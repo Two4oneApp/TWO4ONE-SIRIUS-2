@@ -10,16 +10,21 @@
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "build:testnet": "node build.testnet.js && ionic cordova build android",
-    "build:mainnet": "node build.mainnet.js && ionic cordova build android",
+    "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
-    "lint": "ionic-app-scripts lint",
+    "build:testnet": "node build.testnet.js && ionic cordova build android",
+    "build:mainnet": "node build.mainnet.js && ionic cordova build android",
     "start": "node index.js"
   },
 
   "engines": {
     "node": "20.x",
     "npm": ">=10"
+  },
+
+  "devDependencies": {
+    "@ionic/app-scripts": "3.2.4",
+    "typescript": "3.8.3"
   }
 }
