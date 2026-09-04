@@ -164,16 +164,6 @@ export class MyApp {
       const isModalShown = results[3];
       const isQrActive = !!results[4];
       console.log(
-        // "rootPage:", this.rootPage ,
-        // // this.rootPage !== "OnboardingPage" && this.rootPage !== "WelcomePage"
-      );
-      console.log("isModalShown:", !isModalShown);
-      console.log("isAppPaused:", !isAppPaused);
-      console.log("isLoggedIn:", isLoggedIn);
-      console.log("isQrActive:", isQrActive);
-      console.log("pin:", pin);
-
-      console.log(
         "showModal:",
         // this.rootPage !== "OnboardingPage" &&
           // this.rootPage !== "WelcomePage" &&

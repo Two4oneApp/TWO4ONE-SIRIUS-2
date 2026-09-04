@@ -10,10 +10,12 @@ import { NetworkTypes, ServerConfig } from "nem-library";
 //     nodes: [
 //       "https://bctestnet1.brimstone.xpxsirius.io",
 //       "https://bctestnet2.brimstone.xpxsirius.io",
+//       "https://bctestnet3.brimstone.xpxsirius.io"
 //     ],
 //     nodelist: [
 //       { name: "bctestnet1.brimstone.xpxsirius.io", endpoint: "bctestnet1.brimstone.xpxsirius.io" },
 //       { name: "bctestnet2.brimstone.xpxsirius.io", endpoint: "bctestnet2.brimstone.xpxsirius.io" },
+//       { name: "bctestnet3.brimstone.xpxsirius.io", endpoint: "bctestnet3.brimstone.xpxsirius.io" },
 //     ],
 //     httpNodeUrl: "https://bctestnet1.brimstone.xpxsirius.io",
 //     wsNodeUrl: "ws://bctestnet1.brimstone.xpxsirius.io:3000",
@@ -47,7 +49,6 @@ import { NetworkTypes, ServerConfig } from "nem-library";
 //   }
 // };
 
-
 export const AppConfig = {
   app: {
     environment: 'main'
@@ -59,6 +60,10 @@ export const AppConfig = {
       "https://aldebaran.xpxsirius.io",
       "https://betelgeuse.xpxsirius.io",
       "https://bigcalvin.xpxsirius.io",
+      "https://westerlund.xpxsirius.io",
+      "https://canismajor.xpxsirius.io",
+      "https://coronaborealis.xpxsirius.io",
+      "https://eridanus.xpxsirius.io",
       "https://delphinus.xpxsirius.io",
       "https://lyrasithara.xpxsirius.io"
     ],
@@ -67,8 +72,12 @@ export const AppConfig = {
       { name: "aldebaran.xpxsirius.io", endpoint: "aldebaran.xpxsirius.io" },
       { name: "betelgeuse.xpxsirius.io", endpoint: "betelgeuse.xpxsirius.io" },
       { name: "bigcalvin.xpxsirius.io", endpoint: "bigcalvin.xpxsirius.io" },
+      { name: "canismajor.xpxsirius.io", endpoint: "canismajor.xpxsirius.io" },
+      { name: "coronaborealis.xpxsirius.io", endpoint: "coronaborealis.xpxsirius.io" },
       { name: "delphinus.xpxsirius.io", endpoint: "delphinus.xpxsirius.io" },
+      { name: "eridanus.xpxsirius.io", endpoint: "eridanus.xpxsirius.io" },
       { name: "lyrasithara.xpxsirius.io", endpoint: "lyrasithara.xpxsirius.io" },
+      { name: "westerlund.xpxsirius.io", endpoint: "westerlund.xpxsirius.io" },
 
     ],
     httpNodeUrl: "https://arcturus.xpxsirius.io",
