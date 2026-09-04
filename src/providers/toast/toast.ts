@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { ToastController, Toast } from 'ionic-angular';
 
 /*
@@ -12,7 +11,7 @@ import { ToastController, Toast } from 'ionic-angular';
 export class ToastProvider {
   toast: Toast = null;
 
-  constructor(public toastCtrl: ToastController, private translateService: TranslateService,) {
+  constructor(public toastCtrl: ToastController) {
     console.log('Hello ToastProvider Provider');
   }
 
@@ -20,8 +19,7 @@ export class ToastProvider {
     message: string,
     duration: number,
     showCloseButton: boolean = false,
-    closeButtonText: string = this.translateService.instant("WALLETS.BUTTON.CLOSE")
-
+    closeButtonText: string = 'Close'
   ) {
     const DURATION = duration * 1000;
 
@@ -44,7 +42,7 @@ export class ToastProvider {
         duration: duration,
         showCloseButton: showCloseButton,
         position: 'bottom',
-        closeButtonText: showCloseButton ? closeButtonText : this.translateService.instant("WALLETS.BUTTON.OK")
+        closeButtonText: showCloseButton ? closeButtonText : 'Ok'
       });
 
       this.toast.onDidDismiss(_ => this.toast = null);

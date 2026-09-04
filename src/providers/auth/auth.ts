@@ -57,7 +57,6 @@ export class AuthProvider {
   encryptAccount(p: string) {
     const randomBytesArray = crypto.randomBytes(32);
     const hashKey = Convert.uint8ToHex(randomBytesArray);
-    console.log(CryptoJS.enc.Hex.stringify(this.ec(p, 20)));
     return CryptoJS.AES.encrypt(hashKey, CryptoJS.enc.Hex.stringify(this.ec(p, 20)));
   }
 

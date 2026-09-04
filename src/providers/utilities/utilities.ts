@@ -7,7 +7,6 @@ import { Storage } from '@ionic/storage';
 import { Clipboard } from '@ionic-native/clipboard';
 import { ToastProvider } from '../toast/toast';
 import { DefaultMosaic } from '../../models/default-mosaic';
-import { TranslateService } from '@ngx-translate/core';
 
 /*
   Generated class for the UtilitiesProvider provider.
@@ -27,7 +26,6 @@ export class UtilitiesProvider {
     private events: Events,
     private clipboard: Clipboard,
     private toastProvider: ToastProvider,
-    private translateService: TranslateService,
   ) { }
 
 
@@ -174,15 +172,15 @@ export class UtilitiesProvider {
     let message: string = '';
 
     if (type === 'sender') {
-      message = this.translateService.instant("WALLETS.SENDER.COPY");
+      message = 'Sender\'s address copied successfully';
     } else if (type === 'receiver') {
-      message =  this.translateService.instant("WALLETS.RECEIVER.COPY");
+      message = 'Receiver\'s address copied successfully';
     } else if (type === 'hash') {
-      message = this.translateService.instant("WALLETS.HASH.COPY");
+      message = 'Hash copied successfully';
     } else if (type === 'message') {
-      message = this.translateService.instant("WALLETS.MESSAGE.COPY");
+      message = 'Message copied successfully';
     } else if (type === 'cosigner') {
-      message = this.translateService.instant("WALLETS.COSIGNER.COPY");
+      message = 'Cosigner\'s address copied successfully';
     }
 
     this.clipboard.copy(text).then(_ => {
@@ -197,17 +195,17 @@ export class UtilitiesProvider {
   getLogo(mosaic: DefaultMosaic | string) {
     try {
       if (!mosaic) {
-        return AppProvider.LOGO.SIRIUS;
+        return AppProvider.LOGO.OTHERGIFTCARD;
       } else if (typeof(mosaic) === 'string') {
         if (mosaic.toLowerCase()  === AppConfig.xpxHexId) {
           return AppProvider.LOGO.XPX;
         } else {
           if (mosaic.toLowerCase()  === AppConfig.namespaceLikipia) {
-            return AppProvider.LOGO.SIRIUS;
+            return AppProvider.LOGO.OTHERGIFTCARD;
           }
         }
 
-        return AppProvider.LOGO.SIRIUS;
+        return AppProvider.LOGO.OTHERGIFTCARD;
       } else {
         if (
           (
@@ -240,7 +238,7 @@ export class UtilitiesProvider {
           ) ||
           mosaic.hex !== '' && mosaic.hex.toLowerCase() === AppConfig.namespaceLikipia.toLowerCase()
         ) {
-          return AppProvider.LOGO.SIRIUS;
+          return AppProvider.LOGO.OTHERGIFTCARD;
         } else if (
           mosaic.namespaceId &&
           mosaic.namespaceId !== '' &&
@@ -266,11 +264,11 @@ export class UtilitiesProvider {
         ) {
           return AppProvider.LOGO.XAR;
         } else {
-          return AppProvider.LOGO.SIRIUS;
+          return AppProvider.LOGO.OTHERGIFTCARD;
         }
       }
     } catch (error) {
-      return AppProvider.LOGO.SIRIUS;
+      return AppProvider.LOGO.OTHERGIFTCARD;
     }
   }
 

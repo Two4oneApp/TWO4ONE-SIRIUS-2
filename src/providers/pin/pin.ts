@@ -14,7 +14,6 @@ import { ForgeProvider } from '../forge/forge';
 export class PinProvider {
 
   constructor(http: HttpClient, private storage: Storage, private forge: ForgeProvider) {
-    console.log('Hello PinProvider Provider');
   }
 
   get() {
@@ -84,7 +83,6 @@ export class PinProvider {
     ]).then(results => {
       const CURRENT_PIN = results[0];
       const ENCRYPTED_PASSWORD = results[1];
-      console.log("LOG: PinProvider -> ecryptPasswordUsingCurrentPin -> ENCRYPTED_PASSWORD", ENCRYPTED_PASSWORD);
 
       const SALT = ENCRYPTED_PASSWORD.salt;
       const IV = ENCRYPTED_PASSWORD.iv;
@@ -118,11 +116,10 @@ export class PinProvider {
   }
 
   removeCurrentPin() {
-    this.storage.set("currentPin", false).then(pin => {
-      console.log(pin);
+    this.storage.set("currentPin", false).then(() => {
+      // no-op
     }).catch(error => {
       console.log("LOG: PinProvider -> removeCurrentPin -> error", error);
-      console.log(error);
     })
   }
 
