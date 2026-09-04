@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: two4one-wallet-web
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /
+    autoDeploy: true
